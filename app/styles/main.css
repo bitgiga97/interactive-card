@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  background-image: url(/interactive-card/images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  height: 24rem;
+  margin-bottom: 9.1rem;
+}
+.card .back-card {
+  width: 28.6rem;
+  height: 15.7rem;
+  background-image: url(/interactive-card/images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 3.2rem;
+  margin-left: 4.3rem;
+}
+.card .back-card #cvc {
+  padding-top: 7.36rem;
+  padding-left: 22.9rem;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 1.1rem;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.card .front-card {
+  width: 28.6rem;
+  height: 15.7rem;
+  background-image: url(/interactive-card/images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: -6.8rem;
+  position: relative;
+}
+.card .front-card .card-logo {
+  width: 5.4rem;
+  height: 3rem;
+  background-image: url(/interactive-card/images/card-logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 1.8rem;
+  left: 2rem;
+}
+.card .front-card #card-number {
+  position: absolute;
+  top: 8.5rem;
+  left: 2rem;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8em;
+  line-height: 2.3rem;
+  letter-spacing: 2.2px;
+  color: #FFFFFF;
+}
+.card .front-card .card-owner {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 1.1rem;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: absolute;
+  top: 12.5rem;
+  left: 2rem;
+}
+.card .front-card .mm-yy {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 1.1rem;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: absolute;
+  top: 12.5rem;
+  left: 23.2rem;
+  display: flex;
+}
+
+.input-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.input-form form label {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #21092F;
+  margin-bottom: 0.9rem;
+}
+.input-form form ::-moz-placeholder {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #21092F;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-form form :-ms-input-placeholder {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #21092F;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-form form ::placeholder {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #21092F;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-form form input {
+  padding-left: 1.6rem;
+}
+.input-form #first-name,
+.input-form #card-number {
+  width: 32.7rem;
+  height: 4.5rem;
+  background: #FFFFFF;
+  border: 1px solid #DFDEE0;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+}
+.input-form #first-name:hover,
+.input-form #card-number:hover {
+  cursor: pointer;
+}
+.input-form #exp-date {
+  width: 7.2rem;
+  height: 4.5rem;
+  background: #FFFFFF;
+  border: 1px solid #DFDEE0;
+  border-radius: 0.8rem;
+}
+.input-form #exp-date:hover {
+  cursor: pointer;
+}
+.input-form .mm-yy-cvc {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2.8rem;
+}
+.input-form #cvc {
+  width: 16.4rem;
+  height: 4.5rem;
+  background: #FFFFFF;
+  border: 1px solid #DFDEE0;
+  border-radius: 0.8rem;
+  margin-left: 0.3rem;
+}
+.input-form #cvc:hover {
+  cursor: pointer;
+}
+.input-form .mm-yy-cvc-labels {
+  margin-bottom: 0.9rem;
+}
+.input-form .mm-yy-cvc-labels .cvc {
+  margin-left: 2rem;
+}
+.input-form .btn {
+  width: 32.7rem;
+  height: 5.3rem;
+  background: #21092F;
+  border-radius: 0.8rem;
+  border: none;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8em;
+  line-height: 2.3rem;
+  color: #FFFFFF;
+}
+.input-form .btn:hover {
+  cursor: pointer;
+}
+
+#complete-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#complete-state .icon-complete {
+  width: 8rem;
+  height: 8rem;
+  background-image: url(/interactive-card/images/icon-complete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 3.5rem;
+}
+#complete-state h1 {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.8em;
+  line-height: 3.6rem;
+  text-align: center;
+  letter-spacing: 3.42222px;
+  color: #21092F;
+  margin-bottom: 1.6rem;
+}
+#complete-state p {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8em;
+  line-height: 2.3rem;
+  text-align: center;
+  color: #8F8694;
+  margin-bottom: 4.8rem;
+}
+#complete-state .btn-continue {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8em;
+  line-height: 2.3rem;
+  color: #FFFFFF;
+  width: 32.7rem;
+  height: 5.3rem;
+  border: none;
+  background: #21092F;
+  border-radius: 0.8rem;
+}
+
+#error-text,
+#error-number,
+#error-exp,
+#error-cvc {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.5rem;
+  color: #FF5050;
+}
+
+#error-cvc,
+#error-exp {
+  display: flex;
+  margin-top: -2rem;
+}
+
+#error-cvc {
+  align-self: flex-end;
+  margin-top: -1.5rem;
+}
+
+#error-number,
+#error-text {
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#error-text,
+#error-number,
+#error-exp,
+#error-cvc {
+  display: none;
+}
+
+#complete-state {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(/interactive-card/images/bg-main-desktop.png);
+    background-position: 0 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .card {
+    width: 54.1rem;
+    height: 52.7rem;
+  }
+  .card .back-card {
+    width: 44.7rem;
+    height: 24.5rem;
+    margin-left: 25.8rem;
+    margin-top: 30rem;
+  }
+  .card .back-card #cvc {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-top: 11.1rem;
+    padding-left: 35.8rem;
+  }
+  .card .front-card {
+    width: 44.7rem;
+    height: 24.5rem;
+    margin-left: 16.4rem;
+    margin-top: -53.8rem;
+  }
+  .card .front-card .card-logo {
+    width: 8.4rem;
+    height: 4.7rem;
+    top: 2.8rem;
+    left: 3.2rem;
+  }
+  .card .front-card #card-number {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.8em;
+    line-height: 3.6rem;
+    letter-spacing: 3.42222px;
+    top: 13.9rem;
+    left: 3.2rem;
+  }
+  .card .front-card .card-owner {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 20rem;
+    left: 3.2rem;
+  }
+  .card .front-card .mm-yy {
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 20rem;
+    left: 33.3rem;
+  }
+  .input-form {
+    width: 38.1rem;
+    height: 35.2rem;
+    margin-left: 12.5rem;
+  }
+  .input-form #first-name,
+.input-form #card-number {
+    width: 38.1rem;
+  }
+  .input-form #exp-date {
+    width: 8rem;
+  }
+  .input-form .mm-yy-cvc {
+    gap: 1rem;
+  }
+  .input-form .mm-yy-cvc-labels .cvc {
+    margin-left: 5rem;
+  }
+  .input-form #cvc {
+    width: 19.1rem;
+    margin-left: 1rem;
+  }
+  .input-form .btn {
+    width: 38.1rem;
+    margin-top: 4rem;
+  }
+  #complete-state {
+    display: flex;
+    width: 38.1rem;
+    margin-left: 9.7rem;
+  }
+  #complete-state .btn-continue {
+    width: 38.1rem;
+  }
+  #complete-state {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */

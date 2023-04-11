@@ -1,0 +1,312 @@
+@import 'fonts';
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    background-image: url(/interactive-card/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    height: 24rem;
+    margin-bottom: 9.1rem;
+    .back-card {
+        width: 28.6rem;
+        height: 15.7rem;
+        background-image: url(/interactive-card/images/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 3.2rem;
+        margin-left: 4.3rem;
+        #cvc {
+            padding-top: 7.36rem;
+            padding-left: 22.9rem;
+            @include card-text-mobile;
+        }
+    }
+    .front-card {
+        width: 28.6rem;
+        height: 15.7rem;
+        background-image: url(/interactive-card/images/bg-card-front.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: -6.8rem;
+        position: relative;
+        .card-logo {
+            width: 5.4rem;
+            height: 3rem;
+            background-image: url(/interactive-card/images/card-logo.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 1.8rem;
+            left: 2rem;
+        }
+        #card-number {
+            position: absolute;
+            top: 8.5rem;
+            left: 2rem;
+            @include card-number-mobile;
+        }
+        .card-owner {
+            @include card-text-mobile;
+            position: absolute;
+            top: 12.5rem;
+            left: 2rem;
+        }
+        .mm-yy {
+            @include card-text-mobile;
+            position: absolute;
+            top: 12.5rem;
+            left: 23.2rem;
+            display: flex;
+        }
+    }
+}
+
+.input-form {
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        label {
+            @include label-text;
+            margin-bottom: 0.9rem;
+        }
+         ::placeholder {
+            @include placeholder-text;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input {
+            padding-left: 1.6rem;
+        }
+    }
+    #first-name,
+    #card-number {
+        width: 32.7rem;
+        height: 4.5rem;
+        background: #FFFFFF;
+        border: 1px solid #DFDEE0;
+        border-radius: 0.8rem;
+        margin-bottom: 2rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #exp-date {
+        width: 7.2rem;
+        height: 4.5rem;
+        background: #FFFFFF;
+        border: 1px solid #DFDEE0;
+        border-radius: 0.8rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .mm-yy-cvc {
+        display: flex;
+        gap: 0.8rem;
+        margin-bottom: 2.8rem;
+    }
+    #cvc {
+        width: 16.4rem;
+        height: 4.5rem;
+        background: #FFFFFF;
+        border: 1px solid #DFDEE0;
+        border-radius: 0.8rem;
+        margin-left: 0.3rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .mm-yy-cvc-labels {
+        margin-bottom: 0.9rem;
+        .cvc {
+            margin-left: 2rem;
+        }
+    }
+    .btn {
+        width: 32.7rem;
+        height: 5.3rem;
+        background: #21092F;
+        border-radius: 0.8rem;
+        border: none;
+        @include btn-text;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+//complete state div styles
+#complete-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .icon-complete {
+        width: 8rem;
+        height: 8rem;
+        background-image: url(/interactive-card/images/icon-complete.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 3.5rem;
+    }
+    h1 {
+        @include thank-text;
+        margin-bottom: 1.6rem;
+    }
+    p {
+        @include added-text;
+        margin-bottom: 4.8rem;
+    }
+    .btn-continue {
+        @include btn-text;
+        width: 32.7rem;
+        height: 5.3rem;
+        border: none;
+        background: #21092F;
+        border-radius: 0.8rem;
+    }
+}
+
+//Error messages hidden by default
+#error-text,
+#error-number,
+#error-exp,
+#error-cvc {
+    @include error-text;
+}
+
+#error-cvc,
+#error-exp {
+    display: flex;
+    margin-top: -2rem;
+}
+
+#error-cvc {
+    align-self: flex-end;
+    margin-top: -1.5rem;
+}
+
+#error-number,
+#error-text {
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#error-text,
+#error-number,
+#error-exp,
+#error-cvc {
+    display: none;
+}
+
+//hide complete state by default
+#complete-state {
+    display: none;
+}
+
+//media queries
+@media screen and (min-width:1440px) {
+    body {
+        background-image: url(/interactive-card/images/bg-main-desktop.png);
+        background-position: 0 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .card {
+        width: 54.1rem;
+        height: 52.7rem;
+        .back-card {
+            width: 44.7rem;
+            height: 24.5rem;
+            margin-left: 25.8rem;
+            margin-top: 30rem;
+            #cvc {
+                @include card-text-desktop;
+                padding-top: 11.1rem;
+                padding-left: 35.8rem;
+            }
+        }
+        .front-card {
+            width: 44.7rem;
+            height: 24.5rem;
+            margin-left: 16.4rem;
+            margin-top: -53.8rem;
+            .card-logo {
+                width: 8.4rem;
+                height: 4.7rem;
+                top: 2.8rem;
+                left: 3.2rem;
+            }
+            #card-number {
+                @include card-number-desktop;
+                top: 13.9rem;
+                left: 3.2rem;
+            }
+            .card-owner {
+                @include card-text-desktop;
+                top: 20rem;
+                left: 3.2rem;
+            }
+            .mm-yy {
+                @include card-text-desktop;
+                top: 20rem;
+                left: 33.3rem;
+            }
+        }
+    }
+    .input-form {
+        width: 38.1rem;
+        height: 35.2rem;
+        margin-left: 12.5rem;
+        #first-name,
+        #card-number {
+            width: 38.1rem;
+        }
+        #exp-date {
+            width: 8rem;
+        }
+        .mm-yy-cvc {
+            gap: 1rem;
+        }
+        .mm-yy-cvc-labels {
+            .cvc {
+                margin-left: 5rem;
+            }
+        }
+        #cvc {
+            width: 19.1rem;
+            margin-left: 1rem;
+        }
+        .btn {
+            width: 38.1rem;
+            margin-top: 4rem;
+        }
+    }
+    #complete-state {
+        display: flex;
+        width: 38.1rem;
+        margin-left: 9.7rem;
+        .btn-continue {
+            width: 38.1rem;
+        }
+    }
+    #complete-state {
+        display: none;
+    }
+}

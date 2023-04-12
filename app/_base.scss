@@ -94,8 +94,8 @@ body {
             padding-left: 1.6rem;
         }
     }
-    #first-name,
-    #card-number {
+    #name,
+    #number {
         width: 32.7rem;
         height: 4.5rem;
         background: #FFFFFF;
@@ -106,7 +106,7 @@ body {
             cursor: pointer;
         }
     }
-    #exp-date {
+    .exp-date {
         width: 7.2rem;
         height: 4.5rem;
         background: #FFFFFF;
@@ -121,7 +121,7 @@ body {
         gap: 0.8rem;
         margin-bottom: 2.8rem;
     }
-    #cvc {
+    #cvc-num {
         width: 16.4rem;
         height: 4.5rem;
         background: #FFFFFF;
@@ -180,11 +180,14 @@ body {
         border: none;
         background: #21092F;
         border-radius: 0.8rem;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
 //Error messages hidden by default
-#error-text,
+#error-name,
 #error-number,
 #error-exp,
 #error-cvc {
@@ -203,12 +206,12 @@ body {
 }
 
 #error-number,
-#error-text {
+#error-name {
     margin-top: -1.5rem;
     margin-bottom: 1.5rem;
 }
 
-#error-text,
+#error-name,
 #error-number,
 #error-exp,
 #error-cvc {
@@ -274,11 +277,11 @@ body {
         width: 38.1rem;
         height: 35.2rem;
         margin-left: 12.5rem;
-        #first-name,
-        #card-number {
+        #name,
+        #number {
             width: 38.1rem;
         }
-        #exp-date {
+        .exp-date {
             width: 8rem;
         }
         .mm-yy-cvc {
@@ -289,7 +292,7 @@ body {
                 margin-left: 5rem;
             }
         }
-        #cvc {
+        #cvc-num {
             width: 19.1rem;
             margin-left: 1rem;
         }
